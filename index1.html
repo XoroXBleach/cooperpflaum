@@ -9,6 +9,22 @@
   <audio id="noise" src="loud-noise.mp3" preload="auto"></audio>
 
 <script>
+  const imgSrc = 'BWAH.png';
+const imgWidthInput = document.getElementById("600");
+const imgHeightInput = document.getElementById("600");
+
+function showImage() {
+  imageContainer.innerHTML = ''; // Clear previous image
+  const img = document.createElement('img');
+  img.src = imgSrc;
+  img.width = parseInt(imgWidthInput.value) || 300;
+  img.height = parseInt(imgHeightInput.value) || 300;
+  imageContainer.appendChild(img);
+}
+
+// Show image every 10 seconds, starting immediately
+showImage();
+setInterval(showImage, intervalSeconds * 1000);
   const intervalSeconds = 10; // Interval in seconds
   const audio = document.getElementById('noise');
 
@@ -53,6 +69,7 @@
 
 </body>
 </html>
+
 
 
 
