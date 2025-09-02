@@ -9,20 +9,20 @@
   <audio id="noise" src="loud-noise.mp3" preload="auto"></audio>
 
 <script>
-
-setInterval(showImage, intervalSeconds * 1000);
-  const intervalSeconds = 10; // Interval in seconds
+  const intervalSeconds = 30; // Play audio every 30 seconds
   const audio = document.getElementById('noise');
 
   function playNoise() {
-    // Reset audio to the beginning and play
     audio.pause();
     audio.currentTime = 0;
     audio.play().catch(e => console.error("Play failed:", e));
   }
 
-  // Play noise every intervalSeconds
+  // Play noise every 30 seconds
   setInterval(playNoise, intervalSeconds * 1000);
+
+  // Optionally play immediately on page load:
+  playNoise();
 </script>
 
 <header>
@@ -55,8 +55,6 @@ setInterval(showImage, intervalSeconds * 1000);
 
 </body>
 </html>
-
-
 
 
 
