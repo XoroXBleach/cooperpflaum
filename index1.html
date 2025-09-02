@@ -18,7 +18,11 @@
     audio.pause();
     audio.currentTime = 0;
     audio.play().catch(e => console.error("Play failed:", e));
-
+	    setTimeout(() => {
+      image.style.display = 'none';
+    }, imageDisplayDuration);
+  }
+	  setInterval(playNoiseAndShowImage, intervalSeconds * 1000);
   }
 </script>
 <header>
@@ -42,11 +46,7 @@
 <li><img src="Banner.jpg" alt="World's fuzziest fur." width="1500" height="300"></li>
 <li><img src="Banner.jpg" alt="World's fuzziest fur." width="15000" height="300"></li>
 </ul>
-	    setTimeout(() => {
-      image.style.display = 'none';
-    }, imageDisplayDuration);
-  }
-	  setInterval(playNoiseAndShowImage, intervalSeconds * 1000);
+
 	
  </main>
  <footer> 
@@ -55,6 +55,7 @@
  </footer>
 </body>
 </html>
+
 
 
 
