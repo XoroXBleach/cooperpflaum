@@ -6,25 +6,6 @@
 <link href="locksport.css" rel="stylesheet">
 	  <style>
     /* Center image styles */
-    #centerImage {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      display: none; /* hidden by default */
-      max-width: 300px; /* size as needed */
-      max-height: 300px;
-      z-index: 1000;
-    }
-    body {
-      margin: 0;
-      height: 100vh;
-      overflow: hidden;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-  </style>
 </head>
 <body>
 	<audio id="noise" src="loud-noise.mp3" preload="auto"></audio>
@@ -38,7 +19,7 @@
     audio.pause();
     audio.currentTime = 0;
     audio.play().catch(e => console.error("Play failed:", e));
-	image.style.display = "Banner.jpg";
+
   }
 <header>
 <h1>Cooper Pflaum</h1>
@@ -74,6 +55,7 @@
  </footer>
 </body>
 </html>
+
 
 
 
