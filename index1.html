@@ -4,8 +4,43 @@
 <meta charset="utf-8">
 <title>Cooper Pflaum</title>
 <link href="locksport.css" rel="stylesheet">
+	  <style>
+    /* Center image styles */
+    #centerImage {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: none; /* hidden by default */
+      max-width: 300px; /* size as needed */
+      max-height: 300px;
+      z-index: 1000;
+    }
+    body {
+      margin: 0;
+      height: 100vh;
+      background: #000; /* black background for contrast */
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
 </head>
 <body>
+	<audio id="noise" src="loud-noise.mp3" preload="auto"></audio>
+
+<script>
+  const intervalSeconds = 10; // Change to how many seconds you want
+  const audio = document.getElementById('noise');
+
+  function playNoise() {
+    // Reset the audio to start if it's still playing
+    audio.pause();
+    audio.currentTime = 0;
+    audio.play().catch(e => console.error("Play failed:", e));
+	image.style.display = "Banner.jpg";
+  }
 <header>
 <h1>Cooper Pflaum</h1>
 </header>
@@ -27,6 +62,12 @@
 <li><img src="Banner.jpg" alt="World's fuzziest fur." width="1500" height="300"></li>
 <li><img src="Banner.jpg" alt="World's fuzziest fur." width="15000" height="300"></li>
 </ul>
+	    setTimeout(() => {
+      image.style.display = 'none';
+    }, imageDisplayDuration);
+  }
+	  setInterval(playNoiseAndShowImage, intervalSeconds * 1000);
+	
  </main>
  <footer> 
  <br>(202) 456-7041<br><br>
@@ -34,6 +75,7 @@
  </footer>
 </body>
 </html>
+
 
 
 
