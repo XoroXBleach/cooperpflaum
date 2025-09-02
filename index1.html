@@ -4,63 +4,55 @@
 <meta charset="utf-8">
 <title>Cooper Pflaum</title>
 <link href="locksport.css" rel="stylesheet">
-
 </head>
 <body>
-	<audio id="noise" src="loud-noise.mp3" preload="auto"></audio>
+  <audio id="noise" src="loud-noise.mp3" preload="auto"></audio>
 
 <script>
-  const intervalSeconds = 10; // Change to how many seconds you want
+  const intervalSeconds = 10; // Interval in seconds
   const audio = document.getElementById('noise');
 
   function playNoise() {
-    // Reset the audio to start if it's still playing
+    // Reset audio to the beginning and play
     audio.pause();
     audio.currentTime = 0;
     audio.play().catch(e => console.error("Play failed:", e));
-	    setTimeout(() => {
-      image.style.display = 'none';
-    }, imageDisplayDuration);
   }
-	  setInterval(playNoiseAndShowImage, intervalSeconds * 1000);
-  }
+
+  // Play noise every intervalSeconds
+  setInterval(playNoise, intervalSeconds * 1000);
 </script>
+
 <header>
-<h1>Cooper Pflaum</h1>
+  <h1>Cooper Pflaum</h1>
 </header>
 <nav>
-	<ul>
-		<li><a href="index.html">The Man Himself</a></li>
-		<li><a href="sitings.html">Sitings</a> </li>
-	</ul>
- </nav>
- 
- <main>
-	 <ul>
-<li><img src="Banner.jpg" alt="World's fuzziest fur." width="100" height="300"></li>
-<li><img src="Banner.jpg" alt="World's fuzziest fur." width="200" height="300"></li>
-<li><img src="Banner.jpg" alt="World's fuzziest fur." width="300" height="300"></li>
-<li><img src="Banner.jpg" alt="World's fuzziest fur." width="400" height="300"></li>
-<li><img src="Banner.jpg" alt="World's fuzziest fur." width="500" height="300"></li>
-<li><img src="Banner.jpg" alt="World's fuzziest fur." width="700" height="300"></li>
-<li><img src="Banner.jpg" alt="World's fuzziest fur." width="1500" height="300"></li>
-<li><img src="Banner.jpg" alt="World's fuzziest fur." width="15000" height="300"></li>
-</ul>
+  <ul>
+    <li><a href="index.html">The Man Himself</a></li>
+    <li><a href="sitings.html">Sitings</a></li>
+  </ul>
+</nav>
 
-	
- </main>
- <footer> 
- <br>(202) 456-7041<br><br>
- <a href="pflaumca@mail.uc.edu">pflaumca@mail.uc.edu</a>
- </footer>
+<main>
+  <ul>
+    <li><img src="Banner.jpg" alt="World's fuzziest fur." width="100" height="300"></li>
+    <li><img src="Banner.jpg" alt="World's fuzziest fur." width="200" height="300"></li>
+    <li><img src="Banner.jpg" alt="World's fuzziest fur." width="300" height="300"></li>
+    <li><img src="Banner.jpg" alt="World's fuzziest fur." width="400" height="300"></li>
+    <li><img src="Banner.jpg" alt="World's fuzziest fur." width="500" height="300"></li>
+    <li><img src="Banner.jpg" alt="World's fuzziest fur." width="700" height="300"></li>
+    <li><img src="Banner.jpg" alt="World's fuzziest fur." width="1500" height="300"></li>
+    <li><img src="Banner.jpg" alt="World's fuzziest fur." width="15000" height="300"></li>
+  </ul>
+</main>
+
+<footer> 
+  <br>(202) 456-7041<br><br>
+  <a href="mailto:pflaumca@mail.uc.edu">pflaumca@mail.uc.edu</a>
+</footer>
+
 </body>
 </html>
-
-
-
-
-
-
 
 
 
